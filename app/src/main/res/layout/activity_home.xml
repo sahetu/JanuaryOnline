@@ -51,4 +51,63 @@
 
     </LinearLayout>
 
+    <RadioGroup
+        android:orientation="horizontal"
+        android:id="@+id/home_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/home_male"
+            android:text="Male"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/home_female"
+            android:text="Female"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:layout_weight="1"
+            android:id="@+id/home_transgender"
+            android:text="Transgender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/home_cricket"
+        android:text="Cricket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/home_chess"
+        android:text="Chess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/home_football"
+        android:text="Football"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <CheckBox
+        android:id="@+id/home_hockey"
+        android:text="Hockey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/show_hobby"
+        android:text="Show Hobby"
+        style="@style/button"/>
+
 </LinearLayout>
