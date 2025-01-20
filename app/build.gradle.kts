@@ -41,6 +41,7 @@ dependencies {
     //Responsive UI
     //implementation("com.intuit.sdp:sdp-android:1.1.1")
     implementation(libs.sdp)
+    implementation(libs.glide)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
