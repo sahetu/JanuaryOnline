@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:padding="@dimen/_5sdp"
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_marginRight="@dimen/_5sdp"
         android:layout_gravity="center"
         android:id="@+id/custom_list_image"
         android:layout_width="@dimen/_70sdp"
@@ -18,15 +17,20 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:gravity="center"
+            android:minLines="2"
             android:id="@+id/custom_list_title"
             style="@style/text_14_bold"/>
 
         <TextView
+            android:gravity="center"
             android:textColor="@android:color/holo_green_dark"
             android:id="@+id/custom_list_offer"
             style="@style/text_14"/>
 
         <TextView
+            android:gravity="center"
+            android:singleLine="true"
             android:id="@+id/custom_list_description"
             style="@style/text_14"/>
 
