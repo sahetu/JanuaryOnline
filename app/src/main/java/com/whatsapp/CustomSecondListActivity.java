@@ -1,6 +1,9 @@
 package com.whatsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListView;
 
@@ -89,6 +92,20 @@ public class CustomSecondListActivity extends AppCompatActivity {
         }
         CustomSecondAdapter adapter = new CustomSecondAdapter(CustomSecondListActivity.this,arrayList);
         gridView.setAdapter(adapter);
+
+        /*gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(CustomSecondListActivity.this, CustomDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("IMAGE",arrayList.get(i).getImage());
+                bundle.putString("TITLE",arrayList.get(i).getTitle());
+                bundle.putString("DESC",arrayList.get(i).getDesc());
+                bundle.putString("OFFER",arrayList.get(i).getOffer());
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        });*/
 
     }
 }

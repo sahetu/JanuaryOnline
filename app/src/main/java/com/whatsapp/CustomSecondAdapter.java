@@ -1,12 +1,15 @@
 package com.whatsapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
@@ -52,6 +55,27 @@ public class CustomSecondAdapter extends BaseAdapter {
         title.setText(arrayList.get(i).getTitle());
         offer.setText(arrayList.get(i).getOffer());
         desc.setText(arrayList.get(i).getDesc());
+
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Image Clicked : "+i, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, CustomDetailActivity.class);
+                Bundle bundle = new Bundle();
+                bundle.putString("IMAGE",arrayList.get(i).getImage());
+                bundle.putString("TITLE",arrayList.get(i).getTitle());
+                bundle.putString("DESC",arrayList.get(i).getDesc());
+                bundle.putString("OFFER",arrayList.get(i).getOffer());
+                intent.putExtras(bundle);
+                context.startActivity(intent);
+            }
+        });
 
         return view;
     }
